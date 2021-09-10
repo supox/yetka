@@ -1,0 +1,122 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}
+    %meta{:content => "שקט בענן - צימרים במעלה גמלא", :name => "description"}
+    %meta{:content => "Maala Gamla, Golan, The Golan Heights, Hotels in Golan, צימר, מעלה גמלא, רמת הגולן, צימרים בגמלא, צימרים במעלה גמלא, צימרים בגולן", :name => "keywords"}
+
+    %link{:href => "https://fonts.googleapis.com", :rel => "preconnect"}/
+    %link{:crossorigin => "", :href => "https://fonts.gstatic.com", :rel => "preconnect"}/
+    %link{:href => "https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap", :rel => "stylesheet"}/
+
+    %title שקט בענן
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+
+  %body#top
+    %div.container
+    - flash.each do |key, message|
+      %p{:class => "alert alert-#{key}"}
+        = message
+
+    %main
+      %nav.navbar.navbar-expand-lg.bg-light.fixed-top.shadow-lg
+        .container
+          %a.navbar-brand.mx-auto.d-lg-none{:href => "index.html"}
+            שקט בענן
+            %strong.d-block צימרים בגמלא
+          %button.navbar-toggler{"aria-controls" => "navbarNav", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-bs-target" => "#navbarNav", "data-bs-toggle" => "collapse", :type => "button"}
+            %span.navbar-toggler-icon
+          #navbarNav.collapse.navbar-collapse
+            %ul.navbar-nav.mx-auto
+              %li.nav-item.active
+                %a.nav-link{:href => "/he/home"} דף הבית
+              %li.nav-item
+                %a.nav-link{:href => "/he/suites"} סוויטות
+              %li.nav-item
+                %a.nav-link{:href => "/he/gallery"} גלריה
+              %a.navbar-brand.d-none.d-lg-block{:href => "/"}
+                שקט בענן
+                %strong.d-block צימרים בגמלא
+              %li.nav-item
+                %a.nav-link{:href => "/he/orders"} הזמנות
+              %li.nav-item
+                %a.nav-link{:href => "/he/giftcard"} Gift card
+              %li.nav-item
+                %a.nav-link{:href => "/he/contact"} צור קשר
+              %li.nav-item
+                %a.nav-link{:href => "/he/around"} בסביבה
+
+      = yield
+
+      %section.gallery
+        .container
+          .row
+            .col-lg-6.col-6.ps-0
+              %img.img-fluid.galleryImage{:alt => "get a vaccine", :src => "images/gallery/medium-shot-man-getting-vaccine.jpg", :title => "get a vaccine for yourself"}/
+            .col-lg-6.col-6.pe-0
+              %img.img-fluid.galleryImage{:alt => "wear a mask", :src => "images/gallery/female-doctor-with-presenting-hand-gesture.jpg", :title => "wear a mask to protect yourself"}/
+      %section#booking.section-padding
+        .container
+          .row
+            .col-lg-8.col-12.mx-auto
+              .booking-form
+                %h2.text-center.mb-lg-3.mb-2 Book an appointment
+                %form{:action => "#booking", :method => "post", :role => "form"}
+                  .row
+                    .col-lg-6.col-12
+                      %input#name.form-control{:name => "name", :placeholder => "Full name", :required => "", :type => "text"}/
+                    .col-lg-6.col-12
+                      %input#email.form-control{:name => "email", :pattern => "[^ @]*@[^ @]*", :placeholder => "Email address", :required => "", :type => "email"}/
+                    .col-lg-6.col-12
+                      %input#phone.form-control{:name => "phone", :pattern => "[0-9]{3}-[0-9]{3}-[0-9]{4}", :placeholder => "Phone: 123-456-7890", :type => "telephone"}/
+                    .col-lg-6.col-12
+                      %input#date.form-control{:name => "date", :type => "date", :value => ""}/
+                    .col-12
+                      %textarea#message.form-control{:name => "message", :placeholder => "Additional Message", :rows => "5"}
+                    .col-lg-3.col-md-4.col-6.mx-auto
+                      %button#submit-button.form-control{:type => "submit"} Book Now
+    %footer#contact.site-footer.section-padding
+      .container
+        .row
+          .col-lg-5.me-auto.col-12
+            %h5.mb-lg-4.mb-3 Opening Hours
+            %ul.list-group.list-group-flush
+              %li.list-group-item.d-flex
+                Sunday : Closed
+              %li.list-group-item.d-flex
+                Monday, Tuesday - Firday
+                %span 8:00 AM - 3:30 PM
+              %li.list-group-item.d-flex
+                Saturday
+                %span 10:30 AM - 5:30 PM
+          .col-lg-2.col-md-6.col-12.my-4.my-lg-0
+            %h5.mb-lg-4.mb-3 Our Clinic
+            %p
+              %a{:href => "mailto:hello@company.co"} hello@company.co
+            %p
+            %p 123 Digital Art Street, San Diego, CA 92123
+          .col-lg-3.col-md-6.col-12.ms-auto
+            %h5.mb-lg-4.mb-2 Socials
+            %ul.social-icon
+              %li
+                %a.social-icon-link.bi-facebook{:href => "#"}
+              %li
+                %a.social-icon-link.bi-twitter{:href => "#"}
+              %li
+                %a.social-icon-link.bi-instagram{:href => "#"}
+              %li
+                %a.social-icon-link.bi-youtube{:href => "#"}
+            %div
+              %p.copyright-text
+                Copyright © Medic Care 2021
+                %br/
+                = succeed "Design:" do
+                  %br/
+                %a{:href => "https://templatemo.com", :target => "_parent"} TemplateMo
+              %p.copyright-text
+                Distributed By:
+                %a{:href => "https://themewagon.com", :target => "_parent"} Themewagon

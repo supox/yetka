@@ -1,0 +1,5 @@
+%h1 גלריה
+
+%div.thumbs
+    - (1..17).each do |i|
+        %a{href: image_url("edit_suite/#{i}.jpg"), style:"background-image:url(" + image_url("edit_suite/#{i}.jpg") + ")"}

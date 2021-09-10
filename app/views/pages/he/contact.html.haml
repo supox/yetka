@@ -1,0 +1,32 @@
+%h1 צור קשר
+%p
+    לפרטים והזמנות אנא פנו אלינו
+%h2 כתובתנו
+%p
+    שקט בענן
+    מעלה גמלא, רחוב בלה בלה
+%h2 טלפונים
+%p
+    %ul.contacts
+        %li
+            %a{href: "tel:+972-52-2561725"}
+                אסף בנקל +972-52-2561725
+        %li
+            %a{href: "tel:+972-54-5459456"}
+                עמית בנקל +972-54-5459456
+%ul.social
+    %li
+        %a{href: 'https://api.whatsapp.com/send?phone=+972522561725', title: 'Whatsapp'}
+            =inline_svg_tag "whatsapp.svg", size: "48px"
+    %li
+        %a{href:'https://www.facebook.com/quietincloud', title: 'Facebook'}
+            =inline_svg_tag "facebook.svg", size: "48px"
+    %li
+        %a{href:'https://www.waze.com/he/live-map/directions/%D7%9E%D7%A2%D7%9C%D7%94-%D7%92%D7%9E%D7%9C%D7%90?place=36323.none', title: 'Waze'}
+            =inline_svg_tag "waze.svg", size: "48px"
+%h2 מייל
+%p
+    %a{href: "mailto:amit.ben.hagai@gmail.com"}
+        amit.ben.hagai@gmail.com
+
+= render "contacts/new", contact: Contact.new
