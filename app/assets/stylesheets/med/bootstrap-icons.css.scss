@@ -1,7 +1,7 @@
 @font-face {
   font-family: "bootstrap-icons";
-  src: url("../fonts/bootstrap-icons.woff2?856008caa5eb66df68595e734e59580d") format("woff2"),
-url("../fonts/bootstrap-icons.woff?856008caa5eb66df68595e734e59580d") format("woff");
+  src: font-url("bootstrap-icons.woff2") format("woff2"),
+       font-url("bootstrap-icons.woff") format("woff");
 }
 
 [class^="bi-"]::before,
@@ -842,6 +842,7 @@ url("../fonts/bootstrap-icons.woff?856008caa5eb66df68595e734e59580d") format("wo
 .bi-input-cursor::before { content: "\f436"; }
 .bi-instagram::before { content: "\f437"; }
 .bi-intersect::before { content: "\f438"; }
+.bi-waze svg { content: "\f83f"; }
 .bi-journal-album::before { content: "\f439"; }
 .bi-journal-arrow-down::before { content: "\f43a"; }
 .bi-journal-arrow-up::before { content: "\f43b"; }

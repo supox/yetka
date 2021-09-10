@@ -737,6 +737,7 @@ strong {
 
 .copyright-text {
   font-size: var(--menu-font-size);
+  direction: ltr;
 }
 
 /*---------------------------------------

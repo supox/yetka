@@ -9,6 +9,7 @@
     %link{:href => "https://fonts.googleapis.com", :rel => "preconnect"}/
     %link{:crossorigin => "", :href => "https://fonts.gstatic.com", :rel => "preconnect"}/
     %link{:href => "https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap", :rel => "stylesheet"}/
+    %script{src: "https://use.fontawesome.com/releases/v5.15.4/js/all.js", "data-mutate-approach" => "sync"}
 
     %title שקט בענן
     = csrf_meta_tags
@@ -38,7 +39,7 @@
                 %a.nav-link{:href => "/he/suites"} סוויטות
               %li.nav-item
                 %a.nav-link{:href => "/he/gallery"} גלריה
-              %a.navbar-brand.d-none.d-lg-block{:href => "/"}
+              %a.navbar-brand.d-none.d-lg-block{:href => "/he/home"}
                 שקט בענן
                 %strong.d-block צימרים בגמלא
               %li.nav-item
@@ -52,37 +53,10 @@
 
       = yield
 
-      %section.gallery
-        .container
-          .row
-            .col-lg-6.col-6.ps-0
-              %img.img-fluid.galleryImage{:alt => "get a vaccine", :src => "images/gallery/medium-shot-man-getting-vaccine.jpg", :title => "get a vaccine for yourself"}/
-            .col-lg-6.col-6.pe-0
-              %img.img-fluid.galleryImage{:alt => "wear a mask", :src => "images/gallery/female-doctor-with-presenting-hand-gesture.jpg", :title => "wear a mask to protect yourself"}/
-      %section#booking.section-padding
-        .container
-          .row
-            .col-lg-8.col-12.mx-auto
-              .booking-form
-                %h2.text-center.mb-lg-3.mb-2 Book an appointment
-                %form{:action => "#booking", :method => "post", :role => "form"}
-                  .row
-                    .col-lg-6.col-12
-                      %input#name.form-control{:name => "name", :placeholder => "Full name", :required => "", :type => "text"}/
-                    .col-lg-6.col-12
-                      %input#email.form-control{:name => "email", :pattern => "[^ @]*@[^ @]*", :placeholder => "Email address", :required => "", :type => "email"}/
-                    .col-lg-6.col-12
-                      %input#phone.form-control{:name => "phone", :pattern => "[0-9]{3}-[0-9]{3}-[0-9]{4}", :placeholder => "Phone: 123-456-7890", :type => "telephone"}/
-                    .col-lg-6.col-12
-                      %input#date.form-control{:name => "date", :type => "date", :value => ""}/
-                    .col-12
-                      %textarea#message.form-control{:name => "message", :placeholder => "Additional Message", :rows => "5"}
-                    .col-lg-3.col-md-4.col-6.mx-auto
-                      %button#submit-button.form-control{:type => "submit"} Book Now
     %footer#contact.site-footer.section-padding
       .container
         .row
-          .col-lg-5.me-auto.col-12
+          .col
             %h5.mb-lg-4.mb-3 Opening Hours
             %ul.list-group.list-group-flush
               %li.list-group-item.d-flex
@@ -93,30 +67,32 @@
               %li.list-group-item.d-flex
                 Saturday
                 %span 10:30 AM - 5:30 PM
-          .col-lg-2.col-md-6.col-12.my-4.my-lg-0
-            %h5.mb-lg-4.mb-3 Our Clinic
+          .col
+            %h5.mb-lg-4.mb-3 צור קשר
             %p
-              %a{:href => "mailto:hello@company.co"} hello@company.co
+              %a{:href => "mailto:amit.ben.hagai@gmail.com"} amit.ben.hagai@gmail.com
             %p
-            %p 123 Digital Art Street, San Diego, CA 92123
-          .col-lg-3.col-md-6.col-12.ms-auto
+            %p שקט בענן, מעלה גמלא
+          .col
             %h5.mb-lg-4.mb-2 Socials
             %ul.social-icon
               %li
-                %a.social-icon-link.bi-facebook{:href => "#"}
+                %a{:href => "https://api.whatsapp.com/send?phone=+972522561725"}
+                  %i.fab.fa-2x.fa-whatsapp
               %li
-                %a.social-icon-link.bi-twitter{:href => "#"}
+                %a{:href => "https://www.facebook.com/quietincloud"}
+                  %i.fab.fa-2x.fa-facebook
               %li
-                %a.social-icon-link.bi-instagram{:href => "#"}
+                %a{:href => "https://instagram.com"}
+                  %i.fab.fa-2x.fa-instagram
               %li
-                %a.social-icon-link.bi-youtube{:href => "#"}
-            %div
-              %p.copyright-text
-                Copyright © Medic Care 2021
-                %br/
-                = succeed "Design:" do
-                  %br/
-                %a{:href => "https://templatemo.com", :target => "_parent"} TemplateMo
-              %p.copyright-text
-                Distributed By:
-                %a{:href => "https://themewagon.com", :target => "_parent"} Themewagon
+                %a{:href => "https://www.waze.com/he/live-map/directions/%D7%9E%D7%A2%D7%9C%D7%94-%D7%92%D7%9E%D7%9C%D7%90?place=36323.none"}
+                  %i.fab.fa-2x.fa-waze
+          
+        %div
+          %p.copyright-text
+            Copyright © Yetka tour
+            = Time.zone.now.year
+            %br/
+            Design:
+            %a{:href => "/", :target => "_parent"} Benkels
