@@ -18,6 +18,7 @@
 
 body {
     direction: rtl;
+    min-width: 800px;
 }
 .hidden {
   display: none;
@@ -30,4 +31,13 @@ body {
 a[href^="tel:"] {
   direction:ltr;
   display:inline-block;
+}
+
+.around .col-4 {
+  text-align: center;
+  padding-bottom: 1em;
+}
+
+.around .img-container {
+  height: 160px;
 }

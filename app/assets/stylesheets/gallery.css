@@ -13,7 +13,7 @@
  
 .imgs {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(8, 1fr);
   grid-gap: 5px;
 }
  
@@ -32,8 +32,3 @@
   animation: fadeIn var(--fade-time) ease-in 1 forwards;
 }
  
-@media(max-width: 600px) {
-  .imgs {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}

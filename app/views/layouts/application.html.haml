@@ -26,32 +26,23 @@
           = message
 
     %main
-      %nav.navbar.navbar-expand-lg.bg-light.fixed-top.shadow-lg
-        .container
-          %a.navbar-brand.mx-auto.d-lg-none{:href => "index.html"}
+      %nav.navbar.navbar-expand.navbar-expand-lg.bg-light.shadow-lg.navbar-nav
+        %ul.navbar-nav
+          %li.nav-item
+            %a.nav-link{:href => "/he/home"} דף הבית
+          %li.nav-item
+            %a.nav-link{:href => "/he/suites"} סוויטות
+          %li.nav-item
+            %a.nav-link{:href => "/he/orders"} הזמנות
+          %a.navbar-brand{:href => "/he/home"}
             שקט בענן
             %strong.d-block צימרים בגמלא
-          %button.navbar-toggler{"aria-controls" => "navbarNav", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-bs-target" => "#navbarNav", "data-bs-toggle" => "collapse", :type => "button"}
-            %span.navbar-toggler-icon
-          #navbarNav.collapse.navbar-collapse
-            %ul.navbar-nav.mx-auto
-              %li.nav-item.active
-                %a.nav-link{:href => "/he/home"} דף הבית
-              %li.nav-item
-                %a.nav-link{:href => "/he/suites"} סוויטות
-              %li.nav-item
-                %a.nav-link{:href => "/he/gallery"} גלריה
-              %a.navbar-brand.d-none.d-lg-block{:href => "/he/home"}
-                שקט בענן
-                %strong.d-block צימרים בגמלא
-              %li.nav-item
-                %a.nav-link{:href => "/he/orders"} הזמנות
-              %li.nav-item
-                %a.nav-link{:href => "/he/giftcard"} Gift card
-              %li.nav-item
-                %a.nav-link{:href => "/he/contact"} צור קשר
-              %li.nav-item
-                %a.nav-link{:href => "/he/around"} בסביבה
+          %li.nav-item
+            %a.nav-link{:href => "/he/giftcard"} Gift card
+          %li.nav-item
+            %a.nav-link{:href => "/he/contact"} צור קשר
+          %li.nav-item
+            %a.nav-link{:href => "/he/around"} בסביבה
 
     .container
       .row
