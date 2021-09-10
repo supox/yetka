@@ -14,8 +14,6 @@
  *= require_self
 
  *= require_tree ./med
- *= require_tree ./gallery
- 
  */
 
 body {
@@ -23,4 +21,13 @@ body {
 }
 .hidden {
   display: none;
+}
+
+#top div h1 {
+  text-align: center;
+}
+
+a[href^="tel:"] {
+  direction:ltr;
+  display:inline-block;
 }

@@ -10,6 +10,8 @@
     %link{:crossorigin => "", :href => "https://fonts.gstatic.com", :rel => "preconnect"}/
     %link{:href => "https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap", :rel => "stylesheet"}/
     %script{src: "https://use.fontawesome.com/releases/v5.15.4/js/all.js", "data-mutate-approach" => "sync"}
+    %script{src: "http://code.jquery.com/jquery-1.11.3.min.js"}
+
 
     %title שקט בענן
     = csrf_meta_tags
@@ -18,10 +20,10 @@
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
 
   %body#top
-    %div.container
-    - flash.each do |key, message|
-      %p{:class => "alert alert-#{key}"}
-        = message
+    %div.container.text-center
+      - flash.each do |key, message|
+        %p{:class => "alert alert-#{key}"}
+          = message
 
     %main
       %nav.navbar.navbar-expand-lg.bg-light.fixed-top.shadow-lg
@@ -51,7 +53,9 @@
               %li.nav-item
                 %a.nav-link{:href => "/he/around"} בסביבה
 
-      = yield
+    .container
+      .row
+        = yield
 
     %footer#contact.site-footer.section-padding
       .container
@@ -73,6 +77,11 @@
               %a{:href => "mailto:amit.ben.hagai@gmail.com"} amit.ben.hagai@gmail.com
             %p
             %p שקט בענן, מעלה גמלא
+            %p.contact-phone.mb-0
+              %a{href: "tel:+972-52-2561725"}
+                %i.bi-phone
+                +972-52-2561725
+              
           .col
             %h5.mb-lg-4.mb-2 Socials
             %ul.social-icon
@@ -86,7 +95,7 @@
                 %a{:href => "https://instagram.com"}
                   %i.fab.fa-2x.fa-instagram
               %li
-                %a{:href => "https://www.waze.com/he/live-map/directions/%D7%9E%D7%A2%D7%9C%D7%94-%D7%92%D7%9E%D7%9C%D7%90?place=36323.none"}
+                %a{:href => "https://www.waze.com/he/live-map/directions/%D7%9E%D7%A2%D7%9C%D7%94-%D7%92%D7%9E%D7%9C%D7%90?to=place.ws.36323.none"}
                   %i.fab.fa-2x.fa-waze
           
         %div

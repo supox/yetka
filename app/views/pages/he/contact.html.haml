@@ -1,4 +1,5 @@
-%h1 צור קשר
+= render "contacts/new", contact: Contact.new
+
 %p
     לפרטים והזמנות אנא פנו אלינו
 %h2 כתובתנו
@@ -9,14 +10,11 @@
 %p
     %ul.contacts
         %li
+            אסף
             %a{href: "tel:+972-52-2561725"}
-                אסף בנקל
-                %span{style: "dir:ltr;"}
-                    +972-52-2561725
+                +972-52-2561725
         %li
+            עמית
             %a{href: "tel:+972-54-5459456"}
-                עמית בנקל
-                %span
-                    +972-54-5459456
+                +972-54-5459456
 
-= render "contacts/new", contact: Contact.new
