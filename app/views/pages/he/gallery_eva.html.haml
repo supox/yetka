@@ -1,14 +1,14 @@
 = javascript_pack_tag 'gallery'
-- images = Dir.glob("app/assets/images/eiv_suite/*.jpg").map{|path| path.split("/").last }
+- images = Dir.glob("app/assets/images/eva_suite/*.jpg").map{|path| path.split("/").last }
 
 %h1 בקתת איב
 
 %div.main-img
-    =image_tag "eiv_suite/#{images[0]}", id: "current"
+    =image_tag "eva_suite/#{images[0]}", id: "current"
 
 %div.imgs
     -images.each do |i|
-        =image_tag "eiv_suite/#{i}"
+        =image_tag "eva_suite/#{i}"
 
 %p
     מפרט
