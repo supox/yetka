@@ -50,17 +50,6 @@
       .container
         .row
           .col
-            %h5.mb-lg-4.mb-3 Opening Hours
-            %ul.list-group.list-group-flush
-              %li.list-group-item.d-flex
-                Sunday : Closed
-              %li.list-group-item.d-flex
-                Monday, Tuesday - Firday
-                %span 8:00 AM - 3:30 PM
-              %li.list-group-item.d-flex
-                Saturday
-                %span 10:30 AM - 5:30 PM
-          .col
             %h5.mb-lg-4.mb-3 צור קשר
             %p
               %a{:href => "mailto:amit.ben.hagai@gmail.com"} amit.ben.hagai@gmail.com
@@ -87,10 +76,10 @@
                 %a{:href => "https://www.waze.com/he/live-map/directions/%D7%9E%D7%A2%D7%9C%D7%94-%D7%92%D7%9E%D7%9C%D7%90?to=place.ws.36323.none"}
                   %i.fab.fa-2x.fa-waze
           
-        %div
-          %p.copyright-text
-            Copyright © Yetka tour
-            = Time.zone.now.year
-            %br/
-            Design:
-            %a{:href => "/", :target => "_parent"} Benkels
+          .col.d-none.d-md-block
+            %p.copyright-text
+              Copyright © Yetka tour
+              = Time.zone.now.year
+              %br/
+              Design:
+              %a{:href => "/", :target => "_parent"} Benkels
