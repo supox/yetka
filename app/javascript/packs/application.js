@@ -8,9 +8,6 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 require("channels")
 require("packs/scrollspy.min")
-require("packs/owl.carousel.min")
-// require("packs/custom")
-
 
 Rails.start()
 Turbolinks.start()
