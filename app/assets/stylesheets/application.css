@@ -41,3 +41,7 @@ a[href^="tel:"] {
 .around .img-container {
   height: 160px;
 }
+
+img.galleryImage {
+  display: none;
+}

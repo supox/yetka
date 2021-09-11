@@ -1,3 +1,15 @@
+= javascript_pack_tag 'switching_images'
+- images = Dir.glob("app/assets/images/main_page_gallery/*.jpg").map{|path| path.split("/").last }
+
+%h1 שקט בענן
+
+%section.gallery
+    .container.text-center
+        %img.img-fluid#switching_image{alt: "שקט בענן", src:image_url("main_page_gallery/#{images[0]}")}
+
+    - images.each do |img|
+        %img.img-fluid.galleryImage{alt: "שקט בענן", src: image_url("main_page_gallery/#{img}")}
+
 %p
     סיפורנו מתחיל כחלום שהפך לחזון ונרקם אט אט לכדי מציאות.
     הסוויטות, הכרם וסביבתן מושפעות ומתמזגות בנוף ובטבע המקיף אותן.
