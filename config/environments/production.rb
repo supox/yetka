@@ -118,7 +118,14 @@ Rails.application.configure do
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
 
-  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.delivery_method = :rest_mail
+  config.action_mailer.rest_mail_settings = {
+    from_email: 'website@sheketbeanan.com',
+    to_email: 'amitbenhagai@gmail.com',
+    api_url: "https://api:#{ENV['MAILGUN_API_KEY']}@api.mailgun.net/v2/mg.sheketbeanan.com/messages",
+  }
+
+  # config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings= {
     :port           => ENV['MAILGUN_SMTP_PORT'],
     :address        => ENV['MAILGUN_SMTP_SERVER'],
