@@ -120,8 +120,6 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :rest_mail
   config.action_mailer.rest_mail_settings = {
-    from_email: 'website@sheketbeanan.com',
-    to_email: 'amitbenhagai@gmail.com',
     api_url: "https://api:#{ENV['MAILGUN_API_KEY']}@api.mailgun.net/v2/mg.sheketbeanan.com/messages",
   }
 
