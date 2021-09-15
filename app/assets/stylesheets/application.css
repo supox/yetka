@@ -40,6 +40,9 @@ a[href^="tel:"] {
 
 .around .img-container {
   height: 160px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
 }
 
 img.galleryImage {
