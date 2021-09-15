@@ -1,0 +1,11 @@
+= javascript_pack_tag 'gallery'
+- images = Dir.glob("app/assets/images/global_gallery/*.jpg").map{|path| path.split("/").last }
+
+%h1 הגלריה
+
+%div.main-img
+    =image_tag "global_gallery/#{images[0]}", id: "current"
+
+%div.imgs
+    -images.each do |i|
+        =image_tag "global_gallery/#{i}"
