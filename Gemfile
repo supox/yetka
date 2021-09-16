@@ -64,4 +64,4 @@ gem 'high_voltage'
 gem "haml-rails"
 gem 'mail_form'
 gem 'inline_svg'
-gem 'mailgun_ruby'
+gem 'mailgun-ruby'
