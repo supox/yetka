@@ -20,6 +20,11 @@ body {
     direction: rtl;
     min-width: 800px;
 }
+
+body container {
+  max-width: 1024px;
+}
+
 .hidden {
   display: none;
 }
@@ -47,4 +52,8 @@ a[href^="tel:"] {
 
 img.galleryImage {
   display: none;
+}
+
+.submit-button {
+  padding-top: 1em;
 }

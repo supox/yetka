@@ -13,9 +13,10 @@
             .col-lg-6.col-12
               = f.text_field :phone, required: true, class: "form-control", placeholder: "טלפון", pattern: "[-+0-9]{10-14}"
             .col-12
-              = f.text_area :message, required: true, rows: 5, class: "form-control", placeholder: "שלח לנו הודעה!"
+              = f.text_area :message, required: true, rows: 5, class: "form-control", placeholder: "שלחו לנו הודעה!"
           .hidden
             = f.label :nickname
             = f.text_field :nickname, hint: 'Leave this field blank!'
-          .col-lg-3.col-md-4.col-6.mx-auto
-            = f.submit 'שלח הודעה', class: 'btn btn-primary'
+          .row
+            .col.submit-button
+              = f.submit 'שלחו הודעה', class: 'btn btn-primary'

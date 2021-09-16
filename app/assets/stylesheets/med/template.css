@@ -1,4 +1,5 @@
 :root {
+  --bg-color:                     #FDFBF1;
   --white-color:                  #FFFFFF;
   --primary-color:                #247cff;
   --section-bg-color:             #F9F9F9;
@@ -7,7 +8,7 @@
   --p-color:                      #717275;
   --border-color:                 #eaeaea;
 
-  --body-font-family:             'Open Sans', sans-serif;
+  --body-font-family:             'Assistant', sans-serif;
 
   --h1-font-size:                 48px;
   --h2-font-size:                 36px;
@@ -15,17 +16,17 @@
   --h4-font-size:                 28px;
   --h5-font-size:                 24px;
   --h6-font-size:                 22px;
-  --p-font-size:                  18px;
+  --p-font-size:                  16px;
   --menu-font-size:               16px;
 
-  --font-weight-light:            300;
-  --font-weight-normal:           400;
-  --font-weight-semibold:         600;
-  --font-weight-bold:             700;
+  --font-weight-light:            250;
+  --font-weight-normal:           300;
+  --font-weight-semibold:         400;
+  --font-weight-bold:             500;
 }
 
 body {
-    background: var(--white-color);
+    background: var(--bg-color);
     font-family: var(--body-font-family);    
     position: relative;
 }
@@ -84,9 +85,7 @@ h6 {
 
 p {
   color: var(--p-color);
-  font-size: var(--p-font-size);
   font-weight: var(--font-weight-light);
-  letter-spacing: 0.5px;
 }
 
 a, 

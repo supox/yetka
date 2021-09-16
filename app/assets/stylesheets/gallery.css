@@ -3,12 +3,13 @@
 }
  
 .main-img {
-    padding-bottom: 1em;
+  text-align: center;
+  padding-bottom: 1em;
 }
 
 .main-img img,
 .imgs img {
-  width: 100%;
+  width: 80%;
 }
  
 .imgs {
@@ -32,3 +33,7 @@
   animation: fadeIn var(--fade-time) ease-in 1 forwards;
 }
  
+div.gallery {
+  padding-top: 2em;
+  min-height: 438px;
+}
