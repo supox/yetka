@@ -2,7 +2,7 @@
 - images = Dir.glob("app/assets/images/main_page_gallery/*.jpg").map{|path| path.split("/").last }
 
 
-%section.gallery
+%div.gallery
     .container.text-center
         %img.img-fluid#switching_image{alt: "שקט בענן", src:image_url("main_page_gallery/#{images[0]}")}
 
@@ -32,7 +32,7 @@
                 הסוויטות, הכרם והנוף מהווים שלושה אלמנטים מרכזיים השוזרים בשילובם את חווית החופש האולטימטיבית.
                 את מתחמנו אנו בונים ומשמרים מתוך הערכה ואהבה ליצירה.
                 נשמח לראותכם.
-            %h7
-                משפחת בנקל
+            %p
+                %strong משפחת בנקל
 
-=image_tag "calendar.png", style: "width: 387px; height: 443px;"
+=image_tag "calendar.png", style: "width: 387px; height: 443px;", alt: "calendar"
