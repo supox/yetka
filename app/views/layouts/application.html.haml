@@ -68,7 +68,8 @@
             %div.navbar-bottom
               %ul
                 %li
-                  =link_to("שקט בענן", "/")
+                  %a{:href => "/he/home"}
+                    =image_tag "logo.webp"
                 %li
                   =link_to("הסוויטות", "/he/suites")
                 %li
@@ -79,16 +80,6 @@
                   =link_to("צור קשר", "/he/contact")
                 %li
                   =link_to("בסביבה", "/he/around")
-
-            %h5.mb-lg-4.mb-3 צור קשר
-            %p
-              %a{:href => "mailto:amit.ben.hagai@gmail.com"} amit.ben.hagai@gmail.com
-            %p
-            %p שקט בענן, מעלה גמלא
-            %p.contact-phone.mb-0
-              %a{href: "tel:+972-52-2561725"}
-                %i.bi-phone
-                +972-52-2561725
               
           .col
             %h5.mb-lg-4.mb-2 Socials
