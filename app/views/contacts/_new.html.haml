@@ -1,6 +1,6 @@
 %div#booking.section-padding
   .container
-    %h2.text-center.mb-lg-3.mb-2 שלח לנו הודעה
+    %h2.text-center.mb-lg-3.mb-2 שלחו לנו הודעה
     = form_for contact do |f|
       .row
       .col-md-6
@@ -13,7 +13,7 @@
             .col-lg-6.col-12
               = f.text_field :phone, required: true, class: "form-control", placeholder: "טלפון", pattern: "[-+0-9]{10-14}"
             .col-12
-              = f.text_area :message, required: true, rows: 5, class: "form-control", placeholder: "שלחו לנו הודעה!"
+              = f.text_area :message, required: true, rows: 5, class: "form-control", placeholder: "תוכן הפניה"
           .hidden
             = f.label :nickname
             = f.text_field :nickname, hint: 'Leave this field blank!'
