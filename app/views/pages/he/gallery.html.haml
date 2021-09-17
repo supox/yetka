@@ -3,9 +3,15 @@
 
 %h1 הגלריה
 
-%div.main-img
-    =image_tag "global_gallery/#{images[0]}", id: "current"
+%div.main-img.carousel
+  %div.carousel-inner
+    %div.carousel-item.active
+      =image_tag "global_gallery/#{images[0]}", id: "current"
+  %button.carousel-control-prev
+    %span.carousel-control-prev-icon
+  %button.carousel-control-next
+    %span.carousel-control-next-icon
 
 %div.imgs
-    -images.each do |i|
-        =image_tag "global_gallery/#{i}"
+  -images.each do |i|
+    =image_tag "global_gallery/#{i}"

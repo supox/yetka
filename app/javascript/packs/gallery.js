@@ -4,6 +4,8 @@ $(function() {
     const img = document.querySelectorAll('.imgs img');
     const imagesList = Array.prototype.slice.call(img);
     const opacity = 0.6;
+    const prevButton = document.querySelector('.carousel-control-prev')
+    const nextButton = document.querySelector('.carousel-control-next')
 
 
     function imgClick(e) {
@@ -44,10 +46,11 @@ $(function() {
 
     imgs.addEventListener('click', imgClick);
     current.addEventListener('click', nextImage);
+    prevButton.addEventListener('click', nextImage);  // ltr, all is mixed up
+    nextButton.addEventListener('click', prevImage);
     setMainImage(img[0].src);
 
     document.onkeydown = checkKey;
-
     function checkKey(e) {
         e = e || window.event;
         if (e.keyCode == '37') {

@@ -1,20 +1,23 @@
-= render "contacts/new", contact: Contact.new
+%div#booking.section-padding
+  .container
+    %h2.text-center.mb-lg-3.mb-2 שלחו לנו הודעה
+    =render "contacts/new", contact: Contact.new
 
 %p
-    לפרטים והזמנות אנא פנו אלינו
+  לפרטים והזמנות אנא פנו אלינו
 %h2 כתובתנו
 %p
-    שקט בענן
-    מושב מעלה גמלא
+  שקט בענן
+  מושב מעלה גמלא
 %h2 טלפונים
 %p
-    %ul.contacts
-        %li
-            אסף
-            %a{href: "tel:+972-52-2561725"}
-                +972-52-2561725
-        %li
-            עמית
-            %a{href: "tel:+972-54-5459456"}
-                +972-54-5459456
+  %ul.contacts
+    %li
+      אסף
+      %a{href: "tel:+972-52-2561725"}
+        +972-52-2561725
+    %li
+      עמית
+      %a{href: "tel:+972-54-5459456"}
+        +972-54-5459456
 

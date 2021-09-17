@@ -21,21 +21,30 @@ body {
     min-width: 800px;
 }
 
-body container {
-  max-width: 1024px;
-}
-
 .hidden {
   display: none;
 }
 
-#top div h1 {
+footer .container,
+main .container {
+  max-width: 1024px;
+}
+
+main div h1 {
   text-align: center;
 }
 
 a[href^="tel:"] {
   direction:ltr;
   display:inline-block;
+}
+
+input.text-ltr {
+  direction:ltr;
+}
+
+input:placeholder-shown.text-ltr {
+  direction:rtl;
 }
 
 .around .col-4 {

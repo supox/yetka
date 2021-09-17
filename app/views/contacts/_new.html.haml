@@ -1,22 +1,18 @@
-%div#booking.section-padding
-  .container
-    %h2.text-center.mb-lg-3.mb-2 שלחו לנו הודעה
-    = form_for contact do |f|
+=form_for contact do |f|
+  .row
+  .col-md-6
+    .booking-form
       .row
-      .col-md-6
-        .booking-form
-          .row
-            .col-lg-6.col-12
-              = f.text_field :name, required: true, class: "form-control", placeholder: "שם מלא"
-            .col-lg-6.col-12
-              = f.text_field :email, required: true, class: "form-control", placeholder: "אימייל", pattern: "[^ @]*@[^ @]*"
-            .col-lg-6.col-12
-              = f.text_field :phone, required: true, class: "form-control", placeholder: "טלפון", pattern: "[-+0-9]{10-14}"
-            .col-12
-              = f.text_area :message, required: true, rows: 5, class: "form-control", placeholder: "תוכן הפניה"
-          .hidden
-            = f.label :nickname
-            = f.text_field :nickname, hint: 'Leave this field blank!'
-          .row
-            .col.submit-button
-              = f.submit 'שלחו הודעה', class: 'btn btn-primary'
+        = f.text_field :name, required: true, class: "form-control", placeholder: "שם מלא"
+      .row
+        = f.text_field :email, required: true, class: "form-control text-ltr", placeholder: "אימייל", pattern: "[^ @]*@[^ @]*"
+      .row
+        = f.text_field :phone, required: true, class: "form-control text-ltr", placeholder: "טלפון", pattern: "[-+0-9]{10-14}"
+      .row
+        = f.text_area :message, required: true, rows: 5, class: "form-control", placeholder: "תוכן הפניה"
+      .hidden
+        = f.label :nickname
+        = f.text_field :nickname, hint: 'Leave this field blank!'
+      .row
+        .col.submit-button
+          = f.submit 'שלחו הודעה', class: 'btn btn-primary'

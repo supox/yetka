@@ -16,7 +16,7 @@
   --h3-font-size:                 32px;
   --h4-font-size:                 28px;
   --h5-font-size:                 24px;
-  --h6-font-size:                 22px;
+  --h6-font-size:                 18px;
   --p-font-size:                  16px;
   --menu-font-size:               16px;
 
@@ -83,6 +83,7 @@ h5 {
 
 h6 {
   font-size: var(--h6-font-size);
+  margin: 0;
 }
 
 p {
@@ -106,8 +107,7 @@ a:hover {
 }
 
 .section-padding {
-  padding-top: 7rem;
-  padding-bottom: 7rem;
+  padding-top: 1rem;
 }
 
 /*---------------------------------------
@@ -414,15 +414,8 @@ strong {
 -----------------------------------------*/
 
 .booking-form .form-control {
-  background: transparent;
-  border-radius: 0;
-  border: 0;
-  border-bottom: 1px solid var(--border-color);
   color: #6c757d;
-  font-weight: var(--font-weight-normal);
-  padding-top: 12px;
-  padding-bottom: 12px;
-  margin-top: 15px;
+  margin-bottom: 0.1em;
   transition: all 0.3s;
 }
 
@@ -446,20 +439,26 @@ strong {
   background: var(--section-bg-color);
 }
 
+.site-footer .row {
+  margin-bottom: 0.5em;
+}
+
 .copyright-text {
   font-size: var(--menu-font-size);
   direction: ltr;
+  padding-top:1em;
 }
 
 /*---------------------------------------
   SOCIAL ICON               
 -----------------------------------------*/
 .social-icon {
-  margin: 0;
+  margin: 0.5em 0 0 0;
   padding: 0;
 }
 
 .social-icon li {
+  margin: 0 13px 0 0;
   list-style: none;
   display: inline-block;
   vertical-align: top;
