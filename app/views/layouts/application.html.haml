@@ -6,9 +6,6 @@
     %meta{:content => "שקט בענן - צימרים במעלה גמלא", :name => "description"}
     %meta{:content => "Maala Gamla, Golan, The Golan Heights, Hotels in Golan, צימר, מעלה גמלא, רמת הגולן, צימרים בגמלא, צימרים במעלה גמלא, צימרים בגולן", :name => "keywords"}
 
-    %link{:href => "https://fonts.googleapis.com", :rel => "preconnect"}/
-    %link{:crossorigin => "", :href => "https://fonts.gstatic.com", :rel => "preconnect"}/
-    %link{:href => "https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap", :rel => "stylesheet"}/
     %link{rel:"shortcut icon", href:image_url("favicon.ico"), type:"image/x-icon"}
     %link{rel:"icon", href:image_url("favicon.ico"), type:"image/x-icon"}
 
@@ -38,19 +35,17 @@
 
     %main
       %nav.navbar.navbar-expand-lg.bg-light.shadow-lg.navbar-nav
+        %a.navbar-brand.d-none.d-lg-block{:href => "/he/home"}
+          =image_tag "logo.webp"
+          %span שקט בענן
         %div.container
-
-          %a.navbar-brand.mx-auto.d-lg-none{:href => "/he/home"}
-            שקט בענן
-            %strong.d-block צימרים בגמלא
+          %a.navbar-brand.d-lg-none{:href => "/he/home"}
+            =image_tag "logo.webp"
+            %span שקט בענן
           %button.navbar-toggler{type: "button", "data-bs-toggle" => "collapse", "data-bs-target" => "#navbarNav", "aria-controls" => "navbarNav", "aria-expanded" => "false", "aria-label" => "Toggle navigation"}
             %span.navbar-toggler-icon
-
           %div.collapse.navbar-collapse{id:"navbarNav"}
             %ul.navbar-nav.mx-auto
-              %a.navbar-brand.d-none.d-lg-block{:href => "/he/home"}
-                שקט בענן
-                %strong.d-block צימרים בגמלא
               %li.nav-item
                 %a.nav-link{:href => "/he/suites"} הסוויטות
               %li.nav-item

@@ -18,7 +18,6 @@
 
 body {
     direction: rtl;
-    min-width: 800px;
 }
 
 body container {
@@ -56,4 +55,9 @@ img.galleryImage {
 
 .submit-button {
   padding-top: 1em;
+}
+
+a.navbar-brand span {
+  display:table-cell;
+  vertical-align:middle;
 }
