@@ -18,6 +18,7 @@
 
 body {
     direction: rtl;
+    min-width: 800px;
 }
 
 body container {
@@ -60,4 +61,16 @@ img.galleryImage {
 a.navbar-brand span {
   display:table-cell;
   vertical-align:middle;
+}
+
+.navbar-bottom ul {
+  list-style-type: none;
+}
+
+.navbar-bottom li {
+  margin-bottom: 0.5em;
+}
+
+.navbar-bottom ul a {
+  align-items: center;
 }

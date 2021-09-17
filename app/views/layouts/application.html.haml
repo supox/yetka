@@ -47,15 +47,15 @@
           %div.collapse.navbar-collapse{id:"navbarNav"}
             %ul.navbar-nav.mx-auto
               %li.nav-item
-                %a.nav-link{:href => "/he/suites"} הסוויטות
+                =nav_link_to("הסוויטות", "/he/suites")
               %li.nav-item
-                %a.nav-link{:href => "/he/gallery"} גלריה
+                =nav_link_to("גלריה", "/he/gallery")
               %li.nav-item
-                %a.nav-link{:href => "/he/orders"} הזמנות
+                =nav_link_to("הזמנות", "/he/orders")
               %li.nav-item
-                %a.nav-link{:href => "/he/contact"} צור קשר
+                =nav_link_to("צור קשר", "/he/contact")
               %li.nav-item
-                %a.nav-link{:href => "/he/around"} בסביבה
+                =nav_link_to("בסביבה", "/he/around")
 
     .container
       .row
@@ -65,6 +65,21 @@
       .container
         .row
           .col
+            %div.navbar-bottom
+              %ul
+                %li
+                  =link_to("שקט בענן", "/")
+                %li
+                  =link_to("הסוויטות", "/he/suites")
+                %li
+                  =link_to("גלריה", "/he/gallery")
+                %li
+                  =link_to("הזמנות", "/he/orders")
+                %li
+                  =link_to("צור קשר", "/he/contact")
+                %li
+                  =link_to("בסביבה", "/he/around")
+
             %h5.mb-lg-4.mb-3 צור קשר
             %p
               %a{:href => "mailto:amit.ben.hagai@gmail.com"} amit.ben.hagai@gmail.com
