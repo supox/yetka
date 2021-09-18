@@ -82,6 +82,7 @@ GEM
       unf (>= 0.0.5, < 1.0.0)
     erubi (1.10.0)
     erubis (2.7.0)
+    fastimage (2.2.5)
     ffi (1.15.4)
     globalid (0.5.2)
       activesupport (>= 5.0)
@@ -252,6 +253,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
   capybara (>= 3.26)
+  fastimage
   haml-rails
   high_voltage
   inline_svg

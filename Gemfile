@@ -65,3 +65,4 @@ gem "haml-rails"
 gem 'mail_form'
 gem 'inline_svg'
 gem 'mailgun-ruby'
+gem 'fastimage'
