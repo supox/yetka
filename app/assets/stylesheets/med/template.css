@@ -9,7 +9,7 @@
   --p-color:                      #717275;
   --border-color:                 #eaeaea;
 
-  --body-font-family:             'Assistant', sans-serif;
+  --body-font-family:             'Heebo', sans-serif;
 
   --h1-font-size:                 48px;
   --h2-font-size:                 36px;
@@ -89,6 +89,7 @@ h6 {
 p {
   color: var(--p-color);
   font-weight: var(--font-weight-light);
+  line-height: 1.7;
 }
 
 a, 
